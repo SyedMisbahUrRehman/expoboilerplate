@@ -1,4 +1,4 @@
-import { Image, Platform, Text } from 'react-native';
+import { Image, Platform, View } from 'react-native';
 import { HelloWave } from '@/components/HelloWave';
 import ParallaxScrollView from '@/components/ParallaxScrollView';
 import { ThemedText } from '@/components/ThemedText';
@@ -13,19 +13,16 @@ export default function HomeScreen() {
           source={require('@/assets/images/partial-react-logo.png')}
           className="absolute bottom-0 left-0 h-44 w-72"
         />
-      }>
-      <ThemedView className="flex-row items-center space-x-2 p-4">
+      }
+    >
+      {/* Title Section */}
+      <ThemedView className="flex-row items-center gap-2 p-4">
         <ThemedText type="title">Welcome!</ThemedText>
-      </ThemedView>
-
-      <ThemedView className="flex-1 items-center justify-center bg-blue-200 p-4">
-        <Text className="text-2xl font-bold text-cyan-700 mb-5">
-          with NativeWind!
-        </Text>
         <HelloWave />
       </ThemedView>
 
-      <ThemedView className="space-y-2 p-4">
+      {/* Step Sections */}
+      <ThemedView className="gap-2 mb-2 px-4">
         <ThemedText type="subtitle">Step 1: Try it</ThemedText>
         <ThemedText>
           Edit <ThemedText type="defaultSemiBold">app/(tabs)/index.tsx</ThemedText> to see changes.
@@ -37,14 +34,14 @@ export default function HomeScreen() {
         </ThemedText>
       </ThemedView>
 
-      <ThemedView className="space-y-2 p-4">
+      <ThemedView className="gap-2 mb-2 px-4">
         <ThemedText type="subtitle">Step 2: Explore</ThemedText>
         <ThemedText>
           Tap the Explore tab to learn more about what's included in this starter app.
         </ThemedText>
       </ThemedView>
 
-      <ThemedView className="space-y-2 p-4">
+      <ThemedView className="gap-2 mb-2 px-4">
         <ThemedText type="subtitle">Step 3: Get a fresh start</ThemedText>
         <ThemedText>
           When you're ready, run{' '}
@@ -54,6 +51,11 @@ export default function HomeScreen() {
           <ThemedText type="defaultSemiBold">app-example</ThemedText>.
         </ThemedText>
       </ThemedView>
+
+      {/* NativeWind Version Notice */}
+      <View className="items-center mt-8">
+        <ThemedText className="text-gray-500">This project uses NativeWind v4</ThemedText>
+      </View>
     </ParallaxScrollView>
   );
 }
