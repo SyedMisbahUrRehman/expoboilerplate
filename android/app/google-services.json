@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "193850137083",
+    "project_id": "expopushnotificationsbymsb",
+    "storage_bucket": "expopushnotificationsbymsb.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:193850137083:android:37d4d8bfc074e1167d935e",
+        "android_client_info": {
+          "package_name": "com.anonymous.expoboilerplate"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBD7L9n4xBluk5ul32zhcuFVF3BN_c02yI"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

@@ -1,10 +1,14 @@
-import { Image, Platform, View } from 'react-native';
+import { Image, Platform, View,Text } from 'react-native';
 import { HelloWave } from '@/components/HelloWave';
 import ParallaxScrollView from '@/components/ParallaxScrollView';
 import { ThemedText } from '@/components/ThemedText';
 import { ThemedView } from '@/components/ThemedView';
+import { usePushNotifications } from '@/components/usePushNotification';
 
 export default function HomeScreen() {
+  const {expoPushToken,notification} = usePushNotifications();
+  const data = JSON.stringify(notification, null, 2);
+  console.log(expoPushToken?.data ?? "");
   return (
     <ParallaxScrollView
       headerBackgroundColor={{ light: '#A1CEDC', dark: '#1D3D47' }}
