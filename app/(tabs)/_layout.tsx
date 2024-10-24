@@ -32,6 +32,16 @@ export default function TabLayout() {
           ),
         }}
       />
+        <Tabs.Screen
+        name="counter"
+        options={{
+          title: 'Counter',
+          tabBarIcon: ({ color, focused }) => (
+            <TabBarIcon name={focused ? 'arrow-up-circle' : 'arrow-up-circle-outline'} color={color} />
+          ),
+        }}
+      />
     </Tabs>
+    
   );
 }
